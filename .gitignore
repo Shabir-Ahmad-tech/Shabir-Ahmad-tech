@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+portfolio/node_modules/
+
+# Next.js build output
+.next/
+portfolio/.next/
+out/
+portfolio/out/
+
+# Environment files
+.env*
+portfolio/.env*
+
+# System & IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

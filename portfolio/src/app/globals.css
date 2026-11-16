@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0b0f17;
+  --foreground: #f8f8f2;
+  --dracula-purple: #bd93f9;
+  --dracula-green: #50fa7b;
+  --dracula-cyan: #8be9fd;
+  --dracula-pink: #ff79c6;
+  --dracula-orange: #ffb86c;
+  --dracula-yellow: #f1fa8c;
+  --dracula-card: #151b28;
+  --dracula-card-border: rgba(189, 147, 249, 0.18);
+  --dracula-muted: #94a3b8;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-dracula-purple: var(--dracula-purple);
+  --color-dracula-green: var(--dracula-green);
+  --color-dracula-cyan: var(--dracula-cyan);
+  --color-dracula-pink: var(--dracula-pink);
+  --color-dracula-orange: var(--dracula-orange);
+  --color-dracula-yellow: var(--dracula-yellow);
+  --color-dracula-card: var(--dracula-card);
+  --color-dracula-card-border: var(--dracula-card-border);
+  --color-dracula-muted: var(--dracula-muted);
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+  selection-background-color: #bd93f9;
+  selection-color: #0b0f17;
+}
+
+/* Custom glow utilities */
+.glow-purple {
+  box-shadow: 0 0 25px -5px rgba(189, 147, 249, 0.35);
+}
+
+.glow-green {
+  box-shadow: 0 0 25px -5px rgba(80, 250, 123, 0.35);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 25px -5px rgba(139, 233, 253, 0.35);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #bd93f9 50%, #8be9fd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-green {
+  background: linear-gradient(135deg, #50fa7b 0%, #8be9fd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Grid background pattern */
+.bg-grid-pattern {
+  background-size: 36px 36px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Radial spotlight mask */
+.spotlight-radial {
+  background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(189, 147, 249, 0.08), transparent 80%);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0f17;
+}
+::-webkit-scrollbar-thumb {
+  background: #232b3e;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #bd93f9;
+}
